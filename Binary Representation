@@ -1,0 +1,15 @@
+Change Decimal No. to its Binary form.
+
+PROBLEM: I/P- N=2
+         O/P- 000000000000000000000000000010        (30 bit)
+         
+SOLUTION:
+
+    string getBinaryRep(int N)
+    {
+        for(int i=29; i>=0; i--){
+            int a= N>>i;
+            if(a & 1) cout<<"1";
+            else cout<<"0";
+        }
+    }
