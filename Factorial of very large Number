@@ -1,0 +1,38 @@
+PROBLEM: I/P- N=10
+         O/P- 3628800
+         
+         I/P- N= 897
+         O/P- 9293892525094676339472445993885368827178460252598488.....
+         
+SOLUTION:
+
+#include <iostream>
+#include <boost/multiprecision/cpp_int.hpp> 
+using namespace boost::multiprecision; 
+using namespace std;
+
+cpp_int fact(int N){              //here cpp_int is data type of boost library
+    if(N==1 | N==0){
+        return 1;
+    }
+    else{
+        return N*fact(N-1);
+    }
+}
+
+int main() {
+	int t,N;
+	cin>>t;
+	while(t--){
+	    cin>>N;
+	    cout<<fact(N)<<endl;
+	}
+	return 0;
+}
+
+
+NOTE: Boost libraries are intended to be widely useful, and usable across a broad spectrum of applications. 
+For example, they are helpful for handling large numbers having range beyond the long long, long double data type (264) in C++.
+So, we need to include-
+      #include <boost/multiprecision/cpp_int.hpp> 
+      using namespace boost::multiprecision;
