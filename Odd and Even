@@ -1,0 +1,12 @@
+PROBLEM: I/P- N=2
+         O/P- even
+         
+SOLUTION:
+
+string oddEven(int N){
+        int a =1;
+        if((N & a)==1){
+            cout<<"odd";
+        }
+        else cout<<"even";
+    }
